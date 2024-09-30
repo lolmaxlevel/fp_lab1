@@ -10,7 +10,7 @@ sum_even_fib() ->
     sum_even_fib(1, 2, 0).
 
 % Рекурсивная функция для вычисления суммы четных чисел Фибоначчи
-sum_even_fib(A, B, Sum) when A > 4000000 ->
+sum_even_fib(A, _, Sum) when A > 4000000 ->
     Sum;
 sum_even_fib(A, B, Sum) ->
     NewSum = if
