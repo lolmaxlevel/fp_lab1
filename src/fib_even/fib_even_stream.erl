@@ -6,7 +6,6 @@
 % Main function to calculate the sum of even Fibonacci numbers
 sum_even_fib() ->
     Sum = sum_even_fib_stream(fib_stream(), 0, 4000000),
-    io:format("Sum: ~p~n", [Sum]),
     Sum.
 
 % Function to generate an infinite Fibonacci stream

@@ -8,7 +8,6 @@ count_distinct_terms() ->
     Terms = generate_powers(),
     UniqueTerms = filter_unique(Terms),
     Count = length(UniqueTerms),
-    io:format("Number of distinct terms: ~p~n", [Count]),
     Count.
 
 % Function to generate powers using map

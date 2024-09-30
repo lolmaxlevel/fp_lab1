@@ -6,7 +6,6 @@
 % Main function to start the recursion
 sum_even_fib() ->
     Sum = sum_even_fib(1, 2),
-    io:format("Sum: ~p~n", [Sum]),
     Sum.
 
 % Recursive function to sum even Fibonacci numbers

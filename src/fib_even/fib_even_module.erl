@@ -8,7 +8,6 @@ sum_even_fib() ->
     FibonacciSequence = generate_fib(4000000),
     EvenFibonacci = lists:filter(fun is_even/1, FibonacciSequence),
     Sum = lists:foldl(fun(A, Acc) -> A + Acc end, 0, EvenFibonacci),
-    io:format("Sum: ~p~n", [Sum]),
     Sum.
 
 % Function to generate Fibonacci sequence up to a maximum value

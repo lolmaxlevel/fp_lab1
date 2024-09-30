@@ -10,7 +10,6 @@ count_distinct_terms() ->
     % это можно считать редьюсером
     UniqueTerms = filter_unique(Terms),
     Count = length(UniqueTerms),
-    io:format("Number of distinct terms: ~p~n", [Count]),
     Count.
 
 generate_powers() ->

@@ -9,7 +9,6 @@ sum_even_fib() ->
 
 % Рекурсивная функция для вычисления суммы четных чисел Фибоначчи
 sum_even_fib(A, _, Sum) when A > 4000000 ->
-    io:format("Sum: ~p~n", [Sum]),
     Sum;
 sum_even_fib(A, B, Sum) ->
     NewSum = case A rem 2 of
