@@ -18,8 +18,8 @@ fib_gen(A, B) ->
 % Function to sum even Fibonacci numbers up to a maximum value
 sum_even_fib_stream(Stream, Acc, Max) ->
     {Value, NextStream} = Stream(),
-    if
-        Value > Max -> Acc;
-        Value rem 2 == 0 -> sum_even_fib_stream(NextStream, Acc + Value, Max);
-        true -> sum_even_fib_stream(NextStream, Acc, Max)
+    case Value of
+    _ when Value > Max -> Acc;
+    _ when Value rem 2 == 0 -> sum_even_fib_stream(NextStream, Acc + Value, Max);
+    _ -> sum_even_fib_stream(NextStream, Acc, Max)
     end.
