@@ -15,4 +15,6 @@ regular_data_tests(_) ->
 
 
 test_regular_case(Expected) ->
-    ?assertEqual(Expected, fib_even_module:sum_even_fib()).
+    ?assertEqual(Expected, fib_even_module:sum_even_fib()),
+    ?assertEqual(Expected, fib_even_stream:sum_even_fib()),
+    ?assertEqual(Expected, fib_even_monolith_tail:sum_even_fib()).
