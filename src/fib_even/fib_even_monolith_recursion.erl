@@ -14,6 +14,6 @@ sum_even_fib(A, _) when A > 4000000 ->
 sum_even_fib(A, B) ->
     NewSum = case A rem 2 of
                  0 -> A;
-                 true -> 0
+                 _ -> 0
              end,
     NewSum + sum_even_fib(B, A + B).
