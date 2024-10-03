@@ -1,0 +1,1 @@
+print(len(set([i**k for i in range(2, 101) for k in range(2, 101)])))
