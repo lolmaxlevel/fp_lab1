@@ -40,7 +40,6 @@ sum_even_fib() ->
     Sum = sum_even_fib(1, 2),
     Sum.
 
-% Recursive function to sum even Fibonacci numbers
 sum_even_fib(A, _) when A > 4000000 ->
     0;
 sum_even_fib(A, B) ->
@@ -59,7 +58,6 @@ sum_even_fib() ->
     Sum = lists:foldl(fun(A, Acc) -> A + Acc end, 0, EvenFibonacci),
     Sum.
 
-% Function to generate Fibonacci sequence up to a maximum value
 generate_fib(Max) ->
     generate_fib(1, 2, Max, []).
 
@@ -69,7 +67,6 @@ generate_fib(A, _, Max, Acc) when A > Max ->
 generate_fib(A, B, Max, Acc) ->
     generate_fib(B, A + B, Max, [A | Acc]).
 
-% Function to check if a number is even
 is_even(N) ->
     N rem 2 == 0.
 ```
@@ -80,14 +77,12 @@ sum_even_fib() ->
     Sum = sum_even_fib_stream(fib_stream(), 0, 4000000),
     Sum.
 
-% Function to generate an infinite Fibonacci stream
 fib_stream() ->
     fun() -> fib_gen(1, 2) end.
 
 fib_gen(A, B) ->
     {A, fun() -> fib_gen(B, A + B) end}.
 
-% Function to sum even Fibonacci numbers up to a maximum value
 sum_even_fib_stream(Stream, Acc, Max) ->
     {Value, NextStream} = Stream(),
     case Value of
@@ -114,7 +109,6 @@ print(len(set([i**k for i in range(2, 101) for k in range(2, 101)])))
 ```erlang
 count_distinct_terms() ->
     Terms = generate_powers(),
-    % это можно считать редьюсером
     UniqueTerms = filter_unique(Terms),
     Count = length(UniqueTerms),
     Count.
@@ -135,7 +129,6 @@ count_distinct_terms() ->
     Count = length(UniqueTerms),
     Count.
 
-% Function to generate powers using map
 generate_powers() ->
     lists:flatten(lists:map(fun(A) ->
         lists:map(fun(B) ->
@@ -143,7 +136,6 @@ generate_powers() ->
         end, lists:seq(2, 100))
     end, lists:seq(2, 100))).
 
-% Function to filter unique terms
 filter_unique(Terms) ->
     lists:usort(Terms).
 ```
